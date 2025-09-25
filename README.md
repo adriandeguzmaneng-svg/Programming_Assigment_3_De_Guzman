@@ -7,13 +7,24 @@ ___
 In this problem, we are tasked to create a python code using an external data that was needed to be download beforehand. Then we are tasked to load this data into the IDE. Then we are tasked to displayed the first 5 rows and last 5 columns.
 
 ### Code 
-<img width="368" height="124" alt="image" src="https://github.com/user-attachments/assets/3b7ee2a0-66c6-4fe0-a1e5-8dc470719602" /> 
-
-<img width="584" height="93" alt="image" src="https://github.com/user-attachments/assets/5894cc8c-24ac-4f31-98cf-2cd6b7049430" />
-
-### How i made it:
-First, according to the instructions, we are tasked to import or load the data into the data frame but we cant use data frames since we still havent imported the library of pandas to manipulate or read data frames. So i import the panda library using the code "import panda as pd". Next i loaded the data file into the IDE using the code "pd.read_csv('cars.csv)" then i procedded to display the data frame so that i can know if the data loaded properly. For the next part, i tried to simply display both the first and last 5 using the "head()" and "tail()" command but the output of that is only the last 5 thus leading me to concatenate both of the part of the array using the syntax "pd.concat([cars.head(), cars.tail()])" and i displayed the output so that i can know if the array displayed is correct.
-
+```python
+import pandas as pd
+cars = pd.read_csv('cars.csv')
+firstandlast = pd.concat([cars.head(), cars.tail()])
+firstandlast
+```
+### How does it work
+These lines loads the library panda for the manipulation of data frams and uploading the external data frame for the following code
+```python
+import pandas as pd #imports the panda library
+cars = pd.read_csv('cars.csv') #loads the file cars.csv and stores it to the variable cars
+```
+This lines gets the first and last 5 of the data and displays it
+```python
+firstandlast = pd.concat([cars.head() #gets the first 5 from the data frame
+  , cars.tail()]) #gets the last 5 from the data frame
+firstandlast #displays the data frame for checking
+```
 ### Output
 <img width="894" height="474" alt="image" src="https://github.com/user-attachments/assets/ea133a8a-90fd-428c-b826-3817be89f8b2" />
 
