@@ -70,13 +70,18 @@ camarocyl = cars.loc[cars['Model'] == 'Camaro Z28', 'cyl'] #looks into the colum
 print("The number of cylinder that the Camaro Z28 has is:", camarocyl.values[0]) #prints the value of the cyl of camarocyl, the .values[0] ensure that that there are no indexes and only value of the camarocyl
 ```
 Determine how many cylinders (‘cyl’) and what gear type (‘gear’) do the car models ‘Mazda RXG Wag’, ‘Ford Pantera L’ and ‘Honda Civic’ have
-
-a. For part a, i used cars.iloc[:,::2] so that we can only keep the columns we have moved by increments of 1 since the terminal value is 2, it is not icluded. Lastly i used .iloc to set a boundery to the data this creating a syntax "cars.iloc[0:5]" so that the data is only limited to 5 columns lastly i displayed the output so that i can know if the output is correct.
-b. For this problem i searched using the "==" syntax if the specific model is "Mazda RX4" then replaced the whole data with the conditional statement. 
-c. Using the same conditional statement we used of problem 2b, we also checked if the model of the car is a "Camaro Z28", that position is the rows but we need to also check for the columns with the cyl so that we can know the value of the cylnders with the specific car model so we put the condition on the row on the first postion and the column condition on the 2nd position on the index thus creating the syntax "cars.loc[cars['Model'] == 'Camaro Z28', 'cyl']". Then i just equated this to a variable and displayed that variable for correction purposes. 
-d. Using the same syntaxes i used on problem 2b  and 2c, i first checked if the model matched the requred model which are  ‘Mazda RX4 Wag’, ‘Ford Pantera L’ and ‘Honda Civic’. With this there are 2 columns we are required to check so we just need to put 2 column in the column seciton of the index thus creating the syntax: ars.loc[cars['Model'] == 'Mazda RX4 Wag', ['cyl', 'gear']]. I repeated this process for the 3 requested model of the cars and displayed them with appropriate message for the cylinders and gears of the specific car.
-
+```python
+mazdacylgear = cars.loc[cars['Model'] == 'Mazda RX4 Wag', ['cyl', 'gear']] #looks into the column "model" and looks for the string "Mazda RX4 Wag" and looks its value in the column cyl and gear
+fordcylgear = cars.loc[cars['Model'] == 'Ford Pantera L', ['cyl', 'gear']] #gets teh value of the cyl and gear from the model Ford Pantera L
+hondacylgear = cars.loc[cars['Model'] == 'Honda Civic', ['cyl', 'gear']] #gets the valye of the cyl and gear from the model Mazda Cyl Gear
+print(" Mazda RX4 Wag = Cylinders:", mazdacylgear['cyl'].values[0], "|Gear:", mazdacylgear['gear'].values[0]) #prints the specified value with the supporting string for information
+print("\n Ford Pantera L =  Cylinders:", fordcylgear['cyl'].values[0], "|Gear:", fordcylgear['gear'].values[0]) #prints the specified value with the supporting string for information
+print("\n Honda Civic = Cylinders:", hondacylgear['cyl'].values[0], "|Gear:", hondacylgear['gear'].values[0]) #prints the specified value with the supporting string for information
+```
 ### Lesson Learned
 This problem helped me to take things step by step since the difficulty of the problem as time goes on is increasing like how the problem 2b uses the simple conditional statement so that we can find the right values upto expanding our knowledge about this conditional statement by experimenting on using multiple variables
+___
+# Version 2
+
 
 
