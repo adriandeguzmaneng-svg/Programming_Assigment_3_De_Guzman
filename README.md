@@ -49,7 +49,28 @@ Wag’, ‘Ford Pantera L’ and ‘Honda Civic’ have.
 ### Code
 <img width="1658" height="585" alt="image" src="https://github.com/user-attachments/assets/82b0c658-1f4a-4799-a132-372ae9e46497" />
 
-### How i made it
+### How does it work
+Initial library and value
+```python
+import pandas as pd
+cars = pd.read_csv('cars.csv')
+```
+Displays the first five rows with odd-numbered columns (columns 1, 3, 5, 7…) of cars
+```python
+oddall = cars.iloc[:, ::2] #only copies each column with an increament of 2
+print(oddall.iloc[0:5]) #limits the column to only 5
+```
+Display the row that contains the ‘Model’ of ‘Mazda RX4
+```python
+mazdarx4 = cars[cars['Model'] == 'Mazda RX4'] #looks into the column "model" and looks for the string "Mazda RX4", if its true, it will store it to the mazdarx4
+```
+How many cylinders (‘cyl’) does the car model ‘Camaro Z28’ have?
+```python
+camarocyl = cars.loc[cars['Model'] == 'Camaro Z28', 'cyl'] #looks into the column "model" and looks for the string "Camaro X28", and looks into the row "cyl"
+print("The number of cylinder that the Camaro Z28 has is:", camarocyl.values[0]) #prints the value of the cyl of camarocyl, the .values[0] ensure that that there are no indexes and only value of the camarocyl
+```
+Determine how many cylinders (‘cyl’) and what gear type (‘gear’) do the car models ‘Mazda RXG Wag’, ‘Ford Pantera L’ and ‘Honda Civic’ have
+
 a. For part a, i used cars.iloc[:,::2] so that we can only keep the columns we have moved by increments of 1 since the terminal value is 2, it is not icluded. Lastly i used .iloc to set a boundery to the data this creating a syntax "cars.iloc[0:5]" so that the data is only limited to 5 columns lastly i displayed the output so that i can know if the output is correct.
 b. For this problem i searched using the "==" syntax if the specific model is "Mazda RX4" then replaced the whole data with the conditional statement. 
 c. Using the same conditional statement we used of problem 2b, we also checked if the model of the car is a "Camaro Z28", that position is the rows but we need to also check for the columns with the cyl so that we can know the value of the cylnders with the specific car model so we put the condition on the row on the first postion and the column condition on the 2nd position on the index thus creating the syntax "cars.loc[cars['Model'] == 'Camaro Z28', 'cyl']". Then i just equated this to a variable and displayed that variable for correction purposes. 
