@@ -100,10 +100,28 @@ print(" Mazda RX4 Wag = Cylinders:", mazdacylgear['cyl'].values[0], "|Gear:", ma
 print("\n Ford Pantera L =  Cylinders:", fordcylgear['cyl'].values[0], "|Gear:", fordcylgear['gear'].values[0]) #prints the specified value with the supporting string for information
 print("\n Honda Civic = Cylinders:", hondacylgear['cyl'].values[0], "|Gear:", hondacylgear['gear'].values[0]) #prints the specified value with the supporting string for information
 ```
+### Output
+Display the first five rows with odd-numbered columns (columns 1, 3, 5, 7…) of cars
+
+<img width="492" height="161" alt="image" src="https://github.com/user-attachments/assets/2b487880-8d03-4e8c-866f-eabc313045de" />
+
+Display the row that contains the ‘Model’ of ‘Mazda RX4’
+
+<img width="700" height="69" alt="image" src="https://github.com/user-attachments/assets/6f3a35f5-a2e7-464e-aa1b-abbb3b5d6484" />
+
+How many cylinders (‘cyl’) does the car model ‘Camaro Z28’ have?
+
+<img width="529" height="40" alt="image" src="https://github.com/user-attachments/assets/1f4cb8d0-7fdc-4076-9fa9-8a858d2e9be2" />
+
+Determine how many cylinders (‘cyl’) and what gear type (‘gear’) do the car models ‘Mazda RX4
+Wag’, ‘Ford Pantera L’ and ‘Honda Civic’ have.
+
+<img width="408" height="128" alt="image" src="https://github.com/user-attachments/assets/592b9819-0b29-4693-818f-1f91277b82c8" />
+
 ### Lesson Learned
 This problem helped me to take things step by step since the difficulty of the problem as time goes on is increasing like how the problem 2b uses the simple conditional statement so that we can find the right values upto expanding our knowledge about this conditional statement by experimenting on using multiple variables
 ___
-# Version 2
+## Version 2
 
 
 
